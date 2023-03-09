@@ -1,0 +1,35 @@
+
+<div>
+  <table class="Student">
+    <thead>
+      <tr>
+        <th><strong>Student ID</strong></th>
+        <th><strong>Student Name</strong></th>
+        <th><strong>Action</strong></th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let student of students">
+      <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td><button (click)="getstudentacademicdetails(student)">VIEW</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<br><br>
+<div class="student" *ngIf="viewstudent">
+  <p><strong>Student Academic Details are</strong></p>
+  <p>Student Name : {{student.name}}</p>
+  <p>Student class : {{student.class}}</p>
+  <p>Student Tlugu Marks : {{mark.telugu}}</p>
+  <p>Student Hindi Marks : {{mark.hindi}}</p>
+  <p>Student English Marks : {{mark.english}}</p>
+  <p>Student Maths Marks : {{mark.maths}}</p>
+  <p>Student Science Marks : {{mark.science}}</p>
+  <p>Student Social Marks : {{mark.social}}</p>
+  <p><strong>Student Total Marks are : {{totalmarks}}</strong></p>
+</div>
+

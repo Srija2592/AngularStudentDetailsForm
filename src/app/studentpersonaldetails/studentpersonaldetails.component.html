@@ -1,0 +1,30 @@
+<div>
+  <table class="Student">
+    <thead>
+      <tr>
+        <th><strong>Student ID</strong></th>
+        <th><strong>Student Name</strong></th>
+        <th><strong>Action</strong></th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let student of Students">
+      <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td><button (click)="getstudentpersonaldata(student)">VIEW</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<br><br>
+
+<div class="student" *ngIf="viewstudent">
+  <p><strong>Student Personal Details are</strong></p>
+  <p>Student Name : {{student.name}}</p>
+  <p>Student age : {{student.age}}</p>
+  <p>Student Father Name : {{student.fathername}}</p>
+  <p>Student Mother Name : {{student.mothername}}</p>
+  <p>Student address : {{student.address}}</p>
+</div>
